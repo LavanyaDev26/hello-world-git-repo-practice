@@ -1,0 +1,41 @@
+pipeline:
+  name: test
+  identifier: test
+  projectIdentifier: HelloWorldApplication26
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: org.Lavanya_Badri
+        repoName: Test
+        build: <+input>
+  stages:
+    - stage:
+        name: stage1
+        identifier: stage1
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+            override: true
+          platform:
+            os: Windows
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - stepGroup:
+                  name: step1
+                  identifier: step1
+                  steps:
+                    - step:
+                        type: Run
+                        name: Run_1
+                        identifier: Run_1
+                        spec:
+                          shell: Sh
