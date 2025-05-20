@@ -6,7 +6,7 @@ pipeline:
   properties:
     ci:
       codebase:
-        connectorRef: Lavanya_Badri
+        connectorRef: org.Lavanya_Badri
         repoName: playpen-learninglabs-basic-project
         build: <+input>
         sparseCheckout: []
